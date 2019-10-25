@@ -1,0 +1,14 @@
+{
+  "name": "ether/telemetry",
+  "description": "A helper for anonymous tracking of Craft CMS plugin usage",
+  "version": "0.0.1",
+  "license": "GNU GPLv3",
+  "require": {
+    "craftcms/cms": "^3.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "ether\\telemetry\\": "src/"
+    }
+  }
+}
