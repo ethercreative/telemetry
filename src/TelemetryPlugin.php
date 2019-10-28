@@ -119,10 +119,11 @@ class TelemetryPlugin extends Plugin
 
 		try
 		{
-			$info = Craft::$app->getPlugins()->getPluginInfo($this->handle);
+			$info = Craft::$app->getPlugins()->getPluginInfo($this->getVersion());
 			$meta = [
 				'key'       => $this->_key($client),
-				'handle'    => $this->handle,
+				'handle'    => $this->getHandle(),
+				'version'   => $this->getVersion(),
 				'edition'   => $info['edition'],
 				'editions'  => self::editions(),
 				'installed' => $info['isInstalled'],
