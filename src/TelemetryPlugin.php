@@ -132,6 +132,7 @@ class TelemetryPlugin extends Plugin
 				'issues'    => $info['licenseIssues'],
 				'trial'     => $info['isTrial'],
 				'env'       => getenv('ENVIRONMENT'),
+				'php'       => phpversion(),
 			];
 			$client->postAsync('', [
 				'headers' => [
